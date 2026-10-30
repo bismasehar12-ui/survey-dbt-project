@@ -1,0 +1,10 @@
+version: 2  # Required dbt schema version
+sources:  # Starts the list of raw data sources
+  - name: survey_raw  # Friendly name used inside source() calls
+    database: big-data-dev-01-512408  # Your real GCP project ID
+    schema: Bisma_Sehar  # The dataset that holds your raw tables
+    tables:  # The raw tables dbt is allowed to read
+      - name: interests  # First survey table
+      - name: learning_style  # Second survey table
+      - name: python_topics  # Third survey table
+      - name: main_table  # Fourth survey table
